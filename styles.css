@@ -57,9 +57,9 @@ body {
   object-fit: cover;
 }
 
-.trainer-bio{
+/* .trainer-bio{
   height: 20vw;
-}
+} */
 
 @media (pointer: coarse) and (hover: none) {
   header {

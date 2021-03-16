@@ -1,7 +1,6 @@
 {
   "name": "personal-project-2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,5 +8,14 @@
     "lite": "lite-server"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trankerry/theGym.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trankerry/theGym/issues"
+  },
+  "homepage": "https://github.com/trankerry/theGym#readme",
+  "description": ""
 }
