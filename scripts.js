@@ -8,28 +8,17 @@ $(function () {
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 510);
   });
 
-//checking the size of the window
-  $(window).resize(function () {
-    let width = $(window).width();  
-  
-    if (width < 992){
-      $.fn.addingClasses();
-      break;
-    }
-  
-  });
-
-  $.fn.addingClasses = function () {
-    $(".trainer-bio-block").addClass("carousel-item");
-    $(".top-carousel").children(".row").removeClass(".row");
-    $(".top-carousel").removeClass(".carousel-item")
-  }
-
-  // $.fn.removingClasses = function () {
-  //   $(".trainer-bio").removeClass("carousel-item")
-  // }
-
 })
+
+$(function () {
+  $("#signUpButton").click(function () {
+      $("#signUpModal").modal("show");
+  })
+  $("#loginButton").click(function () {
+      $("#loginModal").modal('show');
+  });
+})
+
 
 
 

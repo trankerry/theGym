@@ -48,7 +48,7 @@ body {
 }
 
 .navbar-default.scrolled {
-  background: #FFF;
+  background: #DFE0E0;
 }
 
 .card-img-top {
@@ -57,9 +57,10 @@ body {
   object-fit: cover;
 }
 
-/* .trainer-bio{
-  height: 20vw;
-} */
+.signin-button {
+  width: 210px;
+  height: 40px;
+}
 
 @media (pointer: coarse) and (hover: none) {
   header {
