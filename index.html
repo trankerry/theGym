@@ -46,6 +46,11 @@
           <li class="nav-item"><a href="#pricing" class="nav-link text-uppercase font-weight-bold">Pricing</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
         </ul>
+        <span class="navbar-text ml-auto">
+          <a role="button" class="btn btn-info" id="loginButton">Login</a>
+          <a role="button" class="btn btn-danger my-auto font-weight-bold text-white" id="signUpButton">Join Now</a>
+      </span>
+      
       </div>
     </div>
   </nav>
@@ -74,17 +79,66 @@
     <p class="lead"></p>
   </div>
 
+  <section class="section about-section gray-bg" id="about">
+    <div class="container">
+        <div class="row align-items-center flex-row-reverse">
+            <div class="col-lg-6">
+                <div class="about-text go-to">
+                    <h3 class="dark-color">About Me</h3>
+                    <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
+                    <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>
+                    <div class="row about-list">
+                        <div class="col-md-6">
+                            <div class="media">
+                                <label>Birthday</label>
+                                <p>4th april 1998</p>
+                            </div>
+                            <div class="media">
+                                <label>Age</label>
+                                <p>22 Yr</p>
+                            </div>
+                            <div class="media">
+                                <label>Residence</label>
+                                <p>Canada</p>
+                            </div>
+                            <div class="media">
+                                <label>Address</label>
+                                <p>California, USA</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="media">
+                                <label>E-mail</label>
+                                <p>info@domain.com</p>
+                            </div>
+                            <div class="media">
+                                <label>Phone</label>
+                                <p>820-885-3321</p>
+                            </div>
+                            <div class="media">
+                                <label>Skype</label>
+                                <p>skype.0404</p>
+                            </div>
+                            <div class="media">
+                                <label>Freelance</label>
+                                <p>Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-avatar">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80" title="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
   <div class="trainers-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4" id="schedule">Schedule</h1>
     <p class="lead">Join one of 100's of classes per week.</p>
-  </div>
-
-  <div class="col-md-4 col-xl-2 mt-4">
-    <button type="button" class="btn btn-info" id="signUpButton">Sign Up</button>
-  </div>
-
-  <div class="col-md-4 col-xl-2 mt-4">
-    <button type="button" class="btn btn-info" id="loginButton">Login</button>
   </div>
 
   <div id="signUpModal" class="modal fade" role="dialog">
@@ -92,7 +146,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title">Sign Up</h3>
-          <button class="close" type="button" data-dismiss="modal"></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
           <div class="container-fluid">
@@ -161,7 +217,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title">Login</h3>
-          <button class="close" type="button" data-dismiss="modal"></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
           <div class="container-fluid">
@@ -169,11 +227,11 @@
               <div class="form-row">
                 <div class="form-group col-12">
                   <label for="loginEmail" class="sr-only"></label>
-                  <input type="text" class="form-control form-control-sm" id="loginEmail" placeholder="Enter Email">
+                  <input type="text" class="form-control form-control-lg" id="loginEmail" placeholder="Email">
                 </div>
                 <div class="form-group col-12">
                   <label for="loginPassword" class="sr-only">Password</label>
-                  <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                  <input type="password" class="form-control form-control-lg" id="loginPassword" placeholder="Password">
                 </div>
                 <div class="col">
                   <div class="form-check">
@@ -183,7 +241,11 @@
                 </div>
               </div>
               <hr>
-              <div id="appleid-signin" class="m-auto signin-button" data-color="black" data-border="true" data-type="sign-in">
+              <a id="google-button" class="signin-button mx-auto mb-2 btn btn-block btn-social btn-google">
+                <i class="fa fa-google"></i> Sign in with Google
+              </a>
+              
+              <div id="appleid-signin" class="mx-auto signin-button" data-color="black" data-border="true" data-type="sign-in">
               </div>
               <div class="form-row pt-3">
                 <button class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
@@ -201,34 +263,10 @@
     <p class="lead">Meet our world class trainers.</p>
   </div>
 
-
   <div class="container">
-    <!--Trainer Carousel-->
-    <div id="multi-item-example" class="container carousel slide carousel-multi-item" data-ride="carousel">
-
-      <!--Controls-->
-      <div class="controls-top">
-        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-      </div>
-      <!--/Controls-->
-
-      <!--Indicators-->
-      <ol class="carousel-indicators">
-        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-        <li data-target="#multi-item-example" data-slide-to="1"></li>
-        <!-- <li data-target="#multi-item-example" data-slide-to="2"></li> -->
-      </ol>
-      <!--/Indicators-->
-
-      <!--Slides-->
-      <div class="carousel-inner" role="listbox">
-
-        <!--First slide-->
-        <div class="carousel-item top-carousel active">
-          <div class="row">
-
-            <div class="col-md-4 trainer-bio-block">
+    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="900000">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-12 col-sm-6 col-lg-4 active">
               <div class="card mb-2">
                 <img class="card-img-top"
                   src="https://images.unsplash.com/photo-1579119986241-5e72d26cb690?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80"
@@ -246,8 +284,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="col-md-4 clearfix d-none d-md-block trainer-bio-block">
+            <div class="carousel-item col-12 col-sm-6 col-lg-4">
               <div class="card mb-2">
                 <img class="card-img-top"
                   src="https://images.unsplash.com/photo-1554244933-d876deb6b2ff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1100&q=80"
@@ -266,8 +303,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="col-md-4 clearfix d-none d-md-block trainer-bio-block">
+            <div class="carousel-item col-12 col-sm-6 col-lg-4">
               <div class="card mb-2">
                 <img class="card-img-top"
                   src="https://images.unsplash.com/photo-1559949557-7d0ac3e655f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=940&q=80"
@@ -286,92 +322,65 @@
                 </div>
               </div>
             </div>
-
-
-          </div>
-        </div>
-        <!--/First slide-->
-
-        <!--Second slide-->
-        <div class="carousel-item ">
-          <div class="row">
-            <div class="trainer-bio-block">
-              <div class="col-md-4">
-                <div class="card mb-2">
-                  <img class="card-img-top"
-                    src="https://images.unsplash.com/photo-1520877745935-616158eb7fcc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1146&q=80"
-                    alt="Card image cap">
-                  <div class="card-body">
-                    <h4 class="card-title">Megan Trainer</h4>
-                    <p class="card-text">HIIT Trainer</p>
-                    <hr>
-                    <p class="card-text trainer-bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Harum
-                      explicabo
-                      illo aliquid fuga veritatis saepe asperiores aut, qui, libero excepturi corporis in
-                      nisi
-                      suscipit ad,
-                      incidunt ex voluptatibus mollitia obcaecati?</p>
-                    <a class="btn btn-primary">Button</a>
-                  </div>
+            <div class="carousel-item col-12 col-sm-6 col-lg-4">
+              <div class="card mb-2">
+                <img class="card-img-top"
+                  src="https://images.unsplash.com/photo-1520877745935-616158eb7fcc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1146&q=80"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Megan Trainer</h4>
+                  <p class="card-text">HIIT Trainer</p>
+                  <hr>
+                  <p class="card-text trainer-bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Harum
+                    explicabo
+                    illo aliquid fuga veritatis saepe asperiores aut, qui, libero excepturi corporis in
+                    nisi
+                    suscipit ad,
+                    incidunt ex voluptatibus mollitia obcaecati?</p>
+                  <a class="btn btn-primary">Button</a>
                 </div>
               </div>
             </div>
-
-
-            <div class="trainer-bio-block">
-              <div class="col-md-4 clearfix d-none d-md-block">
-                <div class="card mb-2">
-                  <img class="card-img-top"
-                    src="https://images.unsplash.com/photo-1598296885460-5db81b1e33b9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=932&q=80"
-                    alt="Card image cap">
-                  <div class="card-body">
-                    <h4 class="card-title">Diksha Basu</h4>
-                    <p class="card-text">Yoga trainer</p>
-                    <hr>
-                    <p class="card-text trainer-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Inventore
-                      molestias deleniti perferendis quo voluptatum quod facilis maiores vel obcaecati porro
-                      enim
-                      placeat,
-                      magnam repellat soluta facere nobis aperiam quibusdam. Laudantium.</p>
-                    <a class="btn btn-primary">Button</a>
-                  </div>
+            <div class="carousel-item col-12 col-sm-6 col-lg-4">
+              <div class="card mb-2">
+                <img class="card-img-top"
+                  src="https://images.unsplash.com/photo-1598296885460-5db81b1e33b9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=932&q=80"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Diksha Basu</h4>
+                  <p class="card-text">Yoga trainer</p>
+                  <hr>
+                  <p class="card-text trainer-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Inventore
+                    molestias deleniti perferendis quo voluptatum quod facilis maiores vel obcaecati porro
+                    enim
+                    placeat,
+                    magnam repellat soluta facere nobis aperiam quibusdam. Laudantium.</p>
+                  <a class="btn btn-primary">Button</a>
                 </div>
               </div>
             </div>
-
-
-            <div class="trainer-bio-block">
-              <div class="col-md-4 clearfix d-none d-md-block">
-                <div class="card mb-2">
-                  <img class="card-img-top"
-                    src="https://images.unsplash.com/photo-1585154536515-c766bd2a6cdc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=80"
-                    alt="Card image cap">
-                  <div class="card-body">
-                    <h4 class="card-title">Cardi-O</h4>
-                    <p class="card-text">Cardio coach</p>
-                    <hr>
-                    <p class="card-text trainer-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Doloremque
-                      expedita ipsa omnis, atque velit porro, pariatur neque molestias delectus ut
-                      reprehenderit?
-                      Debitis
-                      provident, voluptatum amet quisquam suscipit molestias officiis vitae?</p>
-                    <a class="btn btn-primary">Button</a>
-                  </div>
+            <div class="carousel-item col-12 col-sm-6 col-lg-4">
+              <div class="card mb-2">
+                <img class="card-img-top"
+                  src="https://images.unsplash.com/photo-1585154536515-c766bd2a6cdc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=80"
+                  alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Cardi-O</h4>
+                  <p class="card-text">Cardio coach</p>
+                  <hr>
+                  <p class="card-text trainer-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Doloremque
+                    expedita ipsa omnis, atque velit porro, pariatur neque molestias delectus ut
+                    reprehenderit?
+                    Debitis
+                    provident, voluptatum amet quisquam suscipit molestias officiis vitae?</p>
+                  <a class="btn btn-primary">Button</a>
                 </div>
               </div>
             </div>
-
-          </div>
-        </div>
-        <!--/Second slide-->
-
-        <!--Third slide-->
-        <div class="carousel-item top-carousel">
-          <div class="row">
-            <div class="col-md-4 trainer-bio-block">
+            <div class="carousel-item col-12 col-sm-6 col-lg-4">
               <div class="card mb-2">
                 <img class="card-img-top d-none d-md-block"
                   src="https://images.unsplash.com/photo-1485727749690-d091e8284ef3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1100&q=80"
@@ -389,8 +398,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="col-md-4 clearfix trainer-bio-block">
+            <div class="carousel-item col-12 col-sm-6 col-lg-4">
               <div class="card mb-2">
                 <img class="card-img-top"
                   src="https://images.unsplash.com/photo-1613063373939-fad101bf3ecc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=976&q=80"
@@ -410,20 +418,17 @@
                 </div>
               </div>
             </div>
-
-          </div>
         </div>
-        <!--/Third slide-->
-
-      </div>
-      <!--/Slides-->
-
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <!--/Trainer Carousel-->
-  </div>
-
-
-
+</div>
 
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4" id="pricing">Pricing</h1>
