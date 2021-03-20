@@ -2,6 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 header {
   position: relative;
   background-color: black;
@@ -46,14 +48,32 @@ body {
   min-height: 200vh;
 }
 
-.navbar-default {
+.navbar-default, .navButton {
   transition: 500ms ease;
   background: transparent;
+  border: transparent;
 }
 
-.navbar-default.scrolled {
-  background: #DFE0E0;
+.navbar-default.scrolled{
+  background: #003459;
 }
+
+#footer{
+  background-color: #003459;
+}
+
+.navButton.scrolled{
+  background-color: #00A8E8;
+}
+ .bold-fonts{
+   color: white;
+ }
+
+ .button-color{
+   background-color: #00A8E8;
+   border-color: #00A8E8;
+ }
+
 
 .card-img-top {
   width: 100%;
@@ -73,6 +93,10 @@ img {
   vertical-align: middle;
   border-style: none;
 }
+
+.container-fluid{
+  position: relative;
+}
 @media (pointer: coarse) and (hover: none) {
   header {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
@@ -82,14 +106,6 @@ img {
     display: none;
   }
 }
-
-/*
-
-CC 2.0 License Iatek LLC 2018
-Attribution required
-
-*/
-
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* Show 3rd slide on md  if col-md-4*/

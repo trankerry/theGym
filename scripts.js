@@ -6,12 +6,14 @@ $(function () {
 //will go from transparent navbar to white
   $(window).scroll(function () {
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 510);
+    // $("#loginButton").toggleClass('scrolled', $(this).scrollTop() > 510);
+    $(".navButton").toggleClass('scrolled', $(this).scrollTop() > 510);
   });
 
 })
 
 $(function () {
-  $("#signUpButton").click(function () {
+  $(".signUpButton").click(function () {
       $("#signUpModal").modal("show");
   })
   $("#loginButton").click(function () {
