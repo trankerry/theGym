@@ -5,7 +5,6 @@
   "engines": {
     "node": "14.9.0"
   },
-  
   "scripts": {
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
     "clean": "rimraf dist",
@@ -14,7 +13,7 @@
     "lite": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run watch:all",
-    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",  
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
     "watch:scss": "onchange 'css/*.scss' -- npm run scss",
     "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
   },
@@ -39,6 +38,7 @@
     "usemin-cli": "^0.6.0"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "gh-pages": "^3.1.0"
   }
 }
